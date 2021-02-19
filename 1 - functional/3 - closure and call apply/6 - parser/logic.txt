@@ -1,0 +1,26 @@
+- shift(arr)
+-
+ - !op => f(val)
+ - op
+    - l = rec(arr)
+    - r = rec(arr)
+    => f(l, r)
+
+[ + [ 2 [ * [ 3 [ 5 []
+
++
+  l = f(2)
+  r = f(3 + 5)
+    +
+        l = f(3)
+        r = f(5)
+    => f(3, 5)
+=> f(2 * (3 + 5))
+
+* + 2 3 5
+shift *
+l = rec(+ 2 3 5)
+shift +
+l = rec(2 3 5)
+shift 2 
+
